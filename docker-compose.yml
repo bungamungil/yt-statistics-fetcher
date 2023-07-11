@@ -6,3 +6,5 @@ services:
       - .env
     volumes:
       - ./credentials:/app/credentials
+    image: vtid-fetcher:latest
+  
