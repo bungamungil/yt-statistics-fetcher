@@ -25,10 +25,7 @@ def read_rows_from_google_sheet(sheet_id):
     return rows
 
 
-def map_channel_id(row):
-    return row[0]
-
-
 def fetch_channels_id():
     rows = read_rows_from_google_sheet(os.getenv("GOOGLE_SHEET_ID"))
-    return map(map_channel_id, rows)
+    map_channel_id = lambda row: row[0]
+    return list(map(map_channel_id, rows))
