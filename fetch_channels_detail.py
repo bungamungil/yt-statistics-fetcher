@@ -25,5 +25,5 @@ def split_list(a_list, x):
 def fetch_channels_detail(channels_id):
     channels_detail = []
     for channels_id_chunk in split_list(channels_id, 50):
-        channels_detail.append(fetch_yt_channels_detail_from_api(channels_id_chunk)["items"])
+        channels_detail.extend(fetch_yt_channels_detail_from_api(channels_id_chunk)["items"])
     return channels_detail

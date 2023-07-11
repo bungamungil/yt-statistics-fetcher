@@ -8,8 +8,8 @@ def main():
     channels_id = fetch_channels_id()
     channels_detail = fetch_channels_detail(channels_id)
     for channel_detail in channels_detail:
-        for channel in channel_detail:
-            print(channel["snippet"]["title"])
+        print(channel_detail["snippet"]["title"])
+            
 
 
 if __name__ == "__main__":
