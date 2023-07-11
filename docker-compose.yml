@@ -1,0 +1,8 @@
+version: '3'
+services:
+  fetcher:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./credentials:/app/credentials
